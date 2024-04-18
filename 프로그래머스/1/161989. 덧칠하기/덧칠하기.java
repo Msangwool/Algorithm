@@ -5,9 +5,7 @@ class Solution {
         int t = section[0];
         
         for (int i : section) {
-            if (t > n) {
-                break;
-            }
+
             if (t <= i) {
                 t = i;
                 t += m;
