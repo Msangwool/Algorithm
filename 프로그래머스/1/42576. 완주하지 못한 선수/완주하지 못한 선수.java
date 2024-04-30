@@ -10,7 +10,7 @@ class Solution {
         }
         
         for (String str : completion) {
-            map.put(str, map.getOrDefault(str, 0) - 1);
+            map.put(str, map.get(str) - 1);
         }
         
         for (String str : participant) {
