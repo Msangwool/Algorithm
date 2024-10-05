@@ -21,30 +21,24 @@ class Solution {
         int i = 0;
         
         while (true) {
-            
-            if (remainMinNum.get(sortedMinNum.get(i)) == 0) {
-                i++;
-            }
-            
+                        
             if (sortedMinNum.get(i) == q.peek()) {
                 int pollQ = q.poll();
                 answer++;
                 remainMinNum.put(pollQ, remainMinNum.get(pollQ) - 1);
-                
-                if (location == 0) {
-                    break;
-                }
-                
                 location--;
+                
+                if (remainMinNum.get(pollQ) == 0) i++; 
+                
+                if (location < 0) break;
+            
                 continue;
             }
             
             q.add(q.poll());
-            
             location--;
-            if (location < 0) {
-                location = q.size() - 1;
-            }
+            
+            if (location < 0) location = q.size() - 1;
         }
     
         return answer;
