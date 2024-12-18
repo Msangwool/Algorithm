@@ -1,10 +1,10 @@
 # [level 0] 할 일 목록 - 181885 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181885) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181885?language=python3) 
 
 ### 성능 요약
 
-메모리: 70.3 MB, 시간: 1.40 ms
+메모리: 9.99 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 06월 11일 13:38:07
+2024년 12월 18일 21:20:44
 
 ### 문제 설명
 
