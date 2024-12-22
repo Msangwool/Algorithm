@@ -1,2 +1,2 @@
 def solution(number, n, m):
-    return int(bool(number % n == 0) & bool(number % m == 0))
+    return int(not(number % n) and not(number % m))
