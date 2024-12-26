@@ -1,2 +1,3 @@
 def solution(n, control):
-    return eval(str(n) + control.replace('w', '+1').replace('s', '-1').replace('d', '+10').replace('a', '-10'))
+    keys = dict(zip(['w', 's', 'd', 'a'], [1, -1, 10, -10]))
+    return n + sum([keys[c] for c in control])
