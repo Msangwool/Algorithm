@@ -1,12 +1,10 @@
 def solution(a, b, c):
-    
-    if (a == b and b == c):
-        return sum(a, b, c) * squareSum(a, b, c) * cubeSum(a, b, c)
-    
-    if (a != b and b != c and a != c):
+    check = len(set([a, b, c]))
+    if (check==3):
         return sum(a, b, c)
-        
-    return sum(a, b, c) * squareSum(a, b, c)
+    if (check==2):
+        return sum(a, b, c) * squareSum(a, b, c)
+    return sum(a, b, c) * squareSum(a, b, c) * cubeSum(a, b, c)
 
 def sum(a, b, c):
     return a + b + c
