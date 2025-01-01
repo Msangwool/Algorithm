@@ -1,10 +1,10 @@
 # [level 0] 간단한 논리 연산 - 181917 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181917) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181917?language=python3) 
 
 ### 성능 요약
 
-메모리: 72.7 MB, 시간: 0.02 ms
+메모리: 10.3 MB, 시간: 0.00 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 04월 16일 21:21:37
+2025년 01월 01일 18:21:01
 
 ### 문제 설명
 
@@ -81,42 +81,19 @@
 <hr>
 
 <ul>
-<li><p>∨과 ∧의 진리표는 다음과 같습니다.</p>
-<table class="table">
-        <thead><tr>
-<th>x</th>
-<th>y</th>
-<th>x ∨ y</th>
-<th>x ∧ y</th>
-</tr>
-</thead>
-        <tbody><tr>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-<td>T</td>
-</tr>
-<tr>
-<td>T</td>
-<td>F</td>
-<td>T</td>
-<td>F</td>
-</tr>
-<tr>
-<td>F</td>
-<td>T</td>
-<td>T</td>
-<td>F</td>
-</tr>
-<tr>
-<td>F</td>
-<td>F</td>
-<td>F</td>
-<td>F</td>
-</tr>
-</tbody>
-      </table></li>
+<li>∨과 ∧의 진리표는 다음과 같습니다.</li>
 </ul>
+
+<p>|x|y|x ∨ y|x ∧ y|</p>
+
+<p>|---|---|---|---|</p>
+
+<p>|T|T|T|T|</p>
+
+<p>|T|F|T|F|</p>
+
+<p>|F|T|T|F|<br>
+    |F|F|F|F|</p>
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
