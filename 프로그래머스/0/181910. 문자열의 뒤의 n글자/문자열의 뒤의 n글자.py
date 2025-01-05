@@ -1,2 +1,2 @@
 def solution(my_string, n):
-    return my_string[-1*n:len(my_string)]
+    return my_string[-n:]
