@@ -1,0 +1,19 @@
+-- 코드를 작성해주세요
+
+SELECT 
+    QUARTER,
+    COUNT(QUARTER) AS ECOLI_COUNT
+FROM
+    (SELECT 
+        CASE 
+            WHEN DATE_FORMAT(DIFFERENTIATION_DATE, '%m') in ('01', '02', '03') THEN '1Q'
+            WHEN DATE_FORMAT(DIFFERENTIATION_DATE, '%m') in ('04', '05', '06') THEN '2Q'
+            WHEN DATE_FORMAT(DIFFERENTIATION_DATE, '%m') in ('07', '08', '09') THEN '3Q'
+            ELSE '4Q'
+        END AS QUARTER
+    FROM 
+        ECOLI_DATA) AS a
+GROUP BY
+    QUARTER
+ORDER BY 
+    QUARTER;
