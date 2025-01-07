@@ -1,6 +1,6 @@
 # [level 0] n 번째 원소부터 - 181892 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181892?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181892) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 12월 19일 14:05:07
+2025년 01월 07일 17:44:32
 
 ### 문제 설명
 
