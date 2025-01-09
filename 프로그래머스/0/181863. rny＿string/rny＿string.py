@@ -1,8 +1,2 @@
 def solution(rny_string):
-    answer = ''
-    for char in rny_string:
-        if (char == 'm'):
-            answer += "rn"
-            continue
-        answer += char
-    return answer
+    return rny_string.replace('m', 'rn')
