@@ -1,2 +1,2 @@
 def solution(myString, pat):
-    return int(pat in myString.replace('A', 'C').replace('B', 'A').replace('C', 'B'))
+    return int(pat.replace('A', 'C').replace('B', 'A').replace('C', 'B') in myString)
