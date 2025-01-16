@@ -1,9 +1,2 @@
 def solution(myString):
-    answer = ''
-    numL = ord('l')
-    for s in myString:
-        if ord(s) < numL:
-            answer += 'l'
-            continue
-        answer += s
-    return answer
+    return ''.join(['l' if ord(s) < ord('l') else s for s in myString])
