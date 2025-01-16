@@ -1,11 +1,5 @@
 def solution(n):
-    answer = []
+    answer = [[0] * n for i in range(n)]
     for i in range(n):
-        answer2 = []
-        for j in range(n):
-            if i == j:
-                answer2.append(1)
-            else:
-                answer2.append(0)
-        answer.append(answer2)
+        answer[i][i] = 1
     return answer
