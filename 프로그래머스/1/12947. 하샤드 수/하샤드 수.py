@@ -1,2 +1,4 @@
 def solution(x):
-    return x % sum(int(s) for s in str(x)) == 0
+    answer = True
+    
+    return int(sum(list(x)) % x == 0)
