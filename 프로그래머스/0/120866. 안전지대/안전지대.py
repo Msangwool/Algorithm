@@ -8,9 +8,7 @@ def solution(board):
                 for x, y in xy:
                     targetX = i + x
                     targetY = j + y
-                    if 0 <= targetX < N and 0 <= targetY < N:
-                        if board[targetX][targetY] == 1:
-                            continue
+                    if 0 <= targetX < N and 0 <= targetY < N and board[targetX][targetY] != 1:
                         board[targetX][targetY] = 2
                 
     answer = 0
