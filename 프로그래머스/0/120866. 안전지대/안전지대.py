@@ -5,11 +5,11 @@ def solution(board):
     for i in range(len(board)):
         for j in range(len(board[i])):
             if board[i][j] == 1:
-                for x, y in xy:
-                    targetX = i + x
-                    targetY = j + y
-                    if 0 <= targetX < N and 0 <= targetY < N and board[targetX][targetY] != 1:
-                        board[targetX][targetY] = 2
+                for x in range(max(i-1, 0), min(i+2, N)):
+                    for y in range(max(j-1, 0), min(j+2, N)):
+                        if board[x][y] == 1:
+                            continue
+                        board[x][y] = 2
                 
     answer = 0
     for i in range(len(board)):
