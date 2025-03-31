@@ -1,5 +1,8 @@
-l = [-1] * 26
-for i, v in enumerate(list(input())):
-    if l[ord(v)-97] == -1:
-      l[ord(v)-97] = i
-print(*l)
+S = list(input())
+c = 'abcdefghijklmnopqrstuvwxyz'
+
+for i in c:
+    if i in S:
+        print(S.index(i), end =' ')
+    else:
+        print(-1, end=' ')
