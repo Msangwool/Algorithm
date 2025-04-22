@@ -6,13 +6,11 @@ for _ in range(int(input())):
             stack.append(c)
             continue
 
-        if len(stack) == 0:
+        if not stack:
             is_valid = False
             break
 
-        if stack.pop() == ')':
-            is_valid = False
-            break
+        stack.pop()
 
     if is_valid and len(stack) == 0:
         print('YES')
