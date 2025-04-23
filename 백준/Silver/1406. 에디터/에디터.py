@@ -10,8 +10,8 @@ for i in input().strip():
 for _ in range(int(input().strip())):
     cmd = input().strip()
     if cmd.startswith('P'):
-        a, b = cmd.split()
-        l_stack.append(b)
+        _, c = cmd.split()
+        l_stack.append(c)
     elif cmd == 'L' and l_stack:
         r_stack.append(l_stack.pop())
     elif cmd == 'D' and r_stack:
