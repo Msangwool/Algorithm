@@ -10,7 +10,7 @@ if M == 1:
     
 l = [True for _ in range(N + 1)]
 
-for i in range(2, N + 1):
+for i in range(2, math.isqrt(N) + 1):
     if l[i]:
         for j in range(i * i, N + 1, i):
             l[j] = False
