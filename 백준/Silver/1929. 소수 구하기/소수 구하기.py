@@ -11,12 +11,9 @@ if M == 1:
 l = [True for _ in range(N + 1)]
 
 for i in range(2, N + 1):
-    if l[i] == False:
-        continue
-    j = 2
-    while i * j <= N:
-        l[i * j] = False
-        j += 1
+    if l[i]:
+        for j in range(i * i, N + 1, i):
+            l[j] = False
 
 for i in range(M, N + 1):
     if l[i]:
