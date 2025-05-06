@@ -1,18 +1,19 @@
+import sys
+input = sys.stdin.readline
+
+output = []
 for _ in range(int(input())):
     stack = []
-    is_valid = True
-    for c in input():
+    for c in input().strip():
         if c == '(':
             stack.append(c)
             continue
 
         if not stack:
-            is_valid = False
+            output.append("NO")
             break
 
         stack.pop()
-
-    if is_valid and len(stack) == 0:
-        print('YES')
     else:
-        print('NO')
+        output.append("NO" if stack else "YES")
+print('\n'.join(output))
