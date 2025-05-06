@@ -1,8 +1,11 @@
+import sys
+input = sys.stdin.readline
+
 l = ['(', ')', '[', ']']
 
 output = []
 while 1:
-    s = input()
+    s = input().rstrip()
 
     if s == '.':
         break
