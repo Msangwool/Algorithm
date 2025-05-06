@@ -1,26 +1,26 @@
 import sys
 input = sys.stdin.readline
 
-str = input().strip()
+s = input().strip()
 
 output = []
 
-targetIdx = str.find("<")
+targetIdx = s.find("<")
 i = 0
 while targetIdx != -1:
-    temp = str[:targetIdx].split(" ")
+    temp = s[:targetIdx].split(" ")
     for i in range(len(temp)):
         temp[i] = temp[i][::-1]
 
     output.append(" ".join(temp))
 
-    nextIdx = str.find(">") + 1
-    output.append(str[targetIdx:nextIdx])
+    nextIdx = s.find(">") + 1
+    output.append(s[targetIdx:nextIdx])
 
-    str = str[nextIdx:]
-    targetIdx = str.find("<")
+    s = s[nextIdx:]
+    targetIdx = s.find("<")
 
-temp = str.split(" ")
+temp = s.split(" ")
 for i in range(len(temp)):
     temp[i] = temp[i][::-1]
 
