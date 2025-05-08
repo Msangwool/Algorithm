@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 input = sys.stdin.readline
 
 N = int(input())
@@ -7,10 +6,10 @@ A = list(map(int, input().strip().split()))
 B = list(map(int, input().strip().split()))
 
 M = int(input())
-C = deque(map(int, input().strip().split()))
+C = list(map(int, input().strip().split()))[::-1]
 
 for i in range(N):
     if A[i] == 0:
-        C.appendleft(B[i])
+        C.append(B[i])
 
-print(*list(C)[:M])
+print(*C[-1:-M-1:-1])
