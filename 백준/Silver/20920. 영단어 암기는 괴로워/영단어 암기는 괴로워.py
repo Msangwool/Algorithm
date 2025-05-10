@@ -1,23 +1,18 @@
 import sys
+from collections import Counter
+
 input = sys.stdin.readline
 
-d = dict()
-
-N, M = map(int, input().strip().split())
+N, M = map(int, input().split())
+filtered = []
 for _ in range(N):
     s = input().strip()
     if len(s) < M:
         continue
 
-    if s in d:
-        d[s] += 1
-    else:
-        d[s] = 1
+    filtered.append(s)
 
-result = []
-for key in d.keys():
-    result.append((key, d[key]))
+freq = Counter(filtered)
 
-result = sorted(result, key=lambda x: (-x[1], -len(x[0]), x[0]))
-for t in result:
-    print(t[0])
+result = sorted(freq.keys(), key=lambda x: (-freq[x], -len(x), x))
+print(*result, sep="\n")
