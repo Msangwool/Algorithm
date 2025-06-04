@@ -1,11 +1,12 @@
-def gcd(a, b):
-    if b == 0:
-        return a
-    return gcd(b, a % b)
+def GCD(a, b):
+    if a % b == 0:
+        return b
+    return GCD(b, a % b)
 
 for _ in range(int(input())):
-    A, B = map(int, input().split())
-    if A > B:
-        print(A*B//gcd(A, B))
+    a, b = map(int, input().split())
+    
+    if a > b:
+        print((a * b) // GCD(a, b))
     else:
-        print(A*B//gcd(A, B))
+        print((a * b) // GCD(b, a))
