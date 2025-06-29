@@ -2,21 +2,19 @@ from collections import deque
 
 def solution(bridge_length, weight, truck_weights):
     time = 0
-    bridge = deque()  
+    bridge = deque() # (weight, exit_time)
     current_weight = 0
-    trucks = deque(truck_weights)
+    truck = deque(truck_weights)
     
-    while trucks or bridge:
+    while bridge or truck:
         time += 1
         
-        if bridge and bridge[0][1] == time:
-            truck_weight, _ = bridge.popleft()
-            current_weight -= truck_weight
-        
-        if trucks:
-            if current_weight + trucks[0] <= weight and len(bridge) < bridge_length:
-                truck = trucks.popleft()
-                current_weight += truck
-                bridge.append((truck, time + bridge_length))
+        if bridge and time == bridge[0][1]:
+            exit_weight, _ = bridge.popleft()
+            current_weight -= exit_weight
+            
+        if truck and truck[0] + current_weight <= weight and len(bridge) < bridge_length:
+            current_weight += truck[0]
+            bridge.append((truck.popleft(), time + bridge_length))
     
     return time
